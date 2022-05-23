@@ -48,19 +48,20 @@ app.delete("/destroy/:id", async (req, res) => {
 });
 
 app.patch("/update", async (req, res) => {
-  await Products.update(req.body, {where: {id: req.body.id}}).then(() => {
-    return res.json({
-      erro: false,
-      msg: 'Produto editado com sucesso!',
+  await Products.update(req.body, { where: { id: req.body.id } })
+    .then(() => {
+      return res.json({
+        erro: false,
+        msg: "Produto editado com sucesso!",
+      });
     })
-  }).catch(() => {
-    return res.json({
-      erro:true,
-      msg: "ERRO! Falha ao editar produto!"
-    })
-  })
-})
-
+    .catch(() => {
+      return res.json({
+        erro: true,
+        msg: "ERRO! Falha ao editar produto!",
+      });
+    });
+});
 
 app.listen(8080, () => {
   console.log("Servidor iniciado na porta 8080: http://localhost:8080");
