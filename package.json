@@ -23,9 +23,13 @@
     "method-override": "^3.0.0",
     "mysql": "^2.18.1",
     "mysql2": "^2.3.3",
+    "pg": "^8.7.3",
     "sequelize": "^6.19.2"
   },
   "devDependencies": {
+    "eslint": "^8.18.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-prettier": "^4.2.1",
     "nodemon": "^2.0.16",
     "prettier": "^2.6.2"
   }
